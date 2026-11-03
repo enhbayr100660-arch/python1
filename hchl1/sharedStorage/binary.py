@@ -76,1064 +76,424 @@
 # lst(n,t)
 
 
-
-
-# bubble sort:
-# number = [5,3,2,1,8]
-# for i in range (len(number)-1):
-#     for j in range(len(number)-1-i):
-#         if number[j]>number[j+1]:
-#             temp = number[j]
-#             number[j]=number[j+1]
-#             number[j+1]=temp
-# print(number)
-
-# task 1
-# number = list(map(int,input("too:  ").split()))
-# for i in range (len(number)-1):
-#     for j in range(len(number)-1-i):
-#         if number[j]>number[j+1]:
-#             temp = number[j]
-#             number[j]=number[j+1]
-#             number[j+1]=temp
-# print(number)
-
-#task 3
-# n = list(map(int,input("too:  ").split())) 
-# for i in range(len(n)-1):
-#     for j in range(len(n)-1-i):
-#         if n[j]<n[j+1]: 
-#             a = n[j]
-#             n[j] = n[j+1]  
-#             n[j+1]=a  
-# print(n)
-
-
 # task 4
-# n = list(map(int,input("too:  ").split())) 
-# for i in range(len(n)-1):
-#     for j in range(len(n)-1-i):
-#         if n[j]>n[j+1]: 
-#             a = n[j]
-#             n[j] = n[j+1]  
-#             n[j+1]=a  
-# print(n)
+# numbers = [6, 12, 18, 24, 30, 36, 42]
 
+# target = 42
 
-# task 5
-# n= list(map(int,input("too:  ").split())) 
-# for i in range(len(n)-1):
-#     for j in range(len(n)-1-i):
-#         if n[j]>n[j+1]: 
-#             a = n[j]
-#             n[j] = n[j+1]  
-#             n[j+1]=a  
-# print(n,end=",")
+# left = 0
+# right = len(numbers) - 1
 
+# while left <= right:
+#     mid = (left + right) // 2
 
-# task 6
-# n = list(map(str,input("ners:  ").split()))
-# for i in range (len(n)-1):
-#     for j in range(len(n)-1-i):
-#         if n[j]>n[j+1]:
-#             a = n[j]
-#             n[j] = n[j+1]
-#             n[j+1]=a
-# print(n)
+#     if numbers[mid] == target:
+#         print("too:", mid)
+#         break
+#     elif numbers[mid] < target:
+#         left = mid + 1
+#     else:
+#         right = mid - 1
 
-# task 7
-# onoo = list(map(int,input("onoo:  ").split()))
-# for i in range(len(onoo)-1):
-#     for j in range(len(onoo)-1-i):
-#         if onoo[j]>onoo[j+1]:
-#             a = onoo[j]
-#             onoo[j]=onoo[j+1]
-#             onoo[j+1]=a
-# print(onoo)
+# # task 5
+# numbers = [10, 20, 30, 40, 50, 60]
 
-# task 8
-# n = list(map(int,input("too:  ").split()))
-# for i in range (len(n)-1):
-#     if n[i]>n[i+1]:
-#         a = n[i]
-#         n[i]=n[i+1]
-#         n[i+1]=a
-# print(n)
+# target = int(input("baihgvi: "))
 
+# left = 0
+# right = len(numbers) - 1
+# found = False
 
-# task 9
-# count = 0
-# n = list(map(int,input("too:  ").split()))
-# for i in range(len(n)-1):
-#     count+=1
-#     for j in range (len(n)-1-i):
-#         if n[j]>n[j+1]:
-#             a = n[j]
-#             n[j]=n[j+1]
-#             n[j+1]=a
-# print(f"toirog:  {count}\n{n}")
+# while left <= right:
+#     mid = (left + right) // 2
 
-            
-# task 10
-# count = 0
-# n = list(map(int,input("too:  ").split()))
-# for i in range(len(n)-1):
-#     for j in range(len(n)-1-i):
-#         if n[j]>n[j+1]:
-#             count+=1
-#             a = n[j]
-#             n[j]=n[j+1]
-#             n[j+1]=a
-# print(count)
+#     if numbers[mid] == target:
+#         found = True
+#         break
+#     elif numbers[mid] < target:
+#         left = mid + 1
+#     else:
+#         right = mid - 1
 
-# task 11
-# n = [12, 5, 20, 8, 15]
-# for i in range (len(n)-1):
-#     if n[i]>n[i+1]:
-#         a = n[i]
-#         n[i]=n[i+1]
-#         n[i+1]=a
-# print(n[-2])
-
-# task 12
-# n = [4, -3, 0, -1, 7, -8, 2]
-# for i in range (len(n)-1):
-#     for j in range(len(n)-1-i):
-#         if n[j]>n[j+1]:
-#             a = n[j]
-#             n[j] = n[j+1]
-#             n[j+1]=a
-# print(n)
-
-# task 13
-# n = list(map(int,input("too:  ").split()))
-# for i in range (len(n)-1):
-#     if n[i]>n[i+1]:
-#         a = n[i]
-#         n[i]=n[i+1]
-#         n[i+1]=a
-#         print(n)
-
-# task 14
-
-# n = list(map(int,input("too:  ").split()))
-# swapped = False
-# for i in range (len(n)-1):
-#     for j in range(len(n)-1-i):
-
-#         if n[j]>n[j+1]:
-#             a = n[j]
-#             n[j] = n[j+1]
-#             n[j+1]=a
-#             swapped = True
-# if swapped == False:
-#     print("eremblegdesen")
+# if found:
+#     print("too")
 # else:
-#     print("eremblegvi bna")
-# print(n)
+#     print("baihgvi")
 
+# task6
 
-# task 15
+# numbers = [2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32]
 
-# n = list(map(int,input("too:  ").split()))
-# round_count = 0
-# for i in range (len(n)-1):
-#         swapped = False
-#         round_count+=1
-#         for j in range(len(n)-1-i):
+# target = int(input("too: "))
 
-#             if n[j]>n[j+1]:
-#                 a = n[j]
-#                 n[j] = n[j+1]
-#                 n[j+1]=a
-#                 swapped = True
-#         if swapped == False:  
-#             break
-# else:
-#     print("eremblegvi bna") 
-
-# print(round_count)
-
-
-# task 16
-# students=[]
-# n = int(input("heden suragch: "))
-# for s in range(n):
-#     b = input("ner:  ")
-#     c = int(input("too:  "))
-#     students.append([b, c])
-# for i in range(len(students)-1):
-#         for j in range(len(students)-1-i):
-#             if students[j][1]>students[j+1][1]:
-#                 a = students[j]
-#                 students[j]=students[j+1]
-#                 students[j+1]=a
-# print(students[-1][0])
-
-# task 17
-
-# students = []
-# n = int(input("heden too:"))
-# for i in range(n):
-#     b = input("ner: ")
-#     c = int(input("nas: "))
-#     students.append([b,c])
-# for x in range(len(students)-1):                        
-#     for j in range(len(students)-1-x):
-#         if students[j][0]>students[j+1][0]:
-#             a = students[j]
-#             students[j]= students[j+1]
-#             students[j+1]= a
-# print(students)
-# print(students)
-
-# Selection Sort — 15 бодлого:
-# n = [4,6,5,3,1,2]
-# for i in range(len(n)-1):
-#     min_idx = i
-
-#     for j in range(i+1,len(n)):
-#         if n[j]<n[min_idx]:
-#             min_idx=j
-
-#     t = n[i]
-#     n[i]= n[min_idx]
-#     n[min_idx]=t
-
-# print(n)
-
-
-# task 1
-# n = list(map(int,input("too: ").split()))
-# for i in range(len(n)-1):
-#     min_indx = i
-#     for j in range(i+1,len(n)):
-#         if n[j]<n[min_indx]:
-#             min_indx = j
-#     t = n[i]
-#     n[i]=n[min_indx]
-#     n[min_indx]=t
-# print(n)
-
-
-# task 2
-# n = list(map(int,input("too:  ").split()))
-# for i in range(3):
-#     min_indx = i
-#     for j in range(i+1,len(n)):
-#         if n[j]<n[min_indx]:
-#             min_indx = j
-#     a = n[i]
-#     n[i]= n[min_indx]
-#     n[min_indx]=a
-# print(n)
-
-# task 3
-# n = list(map(int,input("too:  ").split()))
-# for i in range(len(n)-1):
-#     min_indx = i
-#     for j in range(i+1,len(n)):
-#         if n[j]>n[min_indx]:
-#             min_indx = j
-#     a = n[i]
-#     n[i]= n[min_indx]
-#     n[min_indx]=a
-# print(n)
-
-# task 4
-# arr = [3, -2, 7, -5, 1]
-# for i in range(len(arr)-1):
-#     min_indx = i
-#     for j in range(i+1,len(arr)):
-#         if arr[j]<arr[min_indx]:
-#             min_indx = j
-#     t = arr[i]
-#     arr[i]=arr[min_indx]
-#     arr[min_indx]=t
-# print(arr)            
-
-# task 5 
-# arr = [4, 2, 4, 1, 2, 3]
-# for i in range(len(arr)-1):
-#     min_indx = i
-#     for j in range(i+1,len(arr)):
-#         if arr[j]<arr[min_indx]:
-#             min_indx = j
-#     t = arr[i]
-#     arr[i]=arr[min_indx]
-#     arr[min_indx]=t
-# print(set(arr))            
-
-
-# task 6
-# arr = [8, 5, 3, 9, 2]
-# for i in range(1):
-#     min_indx = i
-#     for j in range(i+1,len(arr)):
-#         if arr[j]<arr[min_indx]:
-#             min_indx = j
-#     t = arr[i]
-#     arr[i]=arr[min_indx]
-#     arr[min_indx]=t
-    
-
-# print(arr)            
-
-
-# task 7
-# arr = [7, 4, 9, 2, 5]
-# for i in range(len(arr)-1):
-#     min_indx = i
-#     for j in range(i+1,len(arr)):
-#         if arr[j]<arr[min_indx]:
-#             min_indx = j
-#     t = arr[0]
-#     arr[0]=arr[min_indx]
-#     arr[min_indx]=t
-# print(arr)
-
-# task 8
-# arr = [6, 3, 8, 1, 5]
-# for i in range(2):
-#     min_indx = i
-#     for j in range(i+1,len(arr)):
-#         if arr[j]<arr[min_indx]:
-#             min_indx = j
-#     t = arr[i]
-#     arr[i]=arr[min_indx]
-#     arr[min_indx]=t
-#     print(arr)
-
-# task 9
-# arr = [4, 1, 3, 2]
+# left = 0
+# right = len(numbers) - 1
 # count = 0
-# for i in range(len(arr)-1):
-#     min_indx = i
-#     for j in range(i+1,len(arr)):
-#         if arr[j]<arr[min_indx]:
-#             min_indx = j
-#     if min_indx != i:
 
-#         t = arr[i]
-#         arr[i]=arr[min_indx]
-#         arr[min_indx]=t
-#         count+=1
-# print(count)
+# while left <= right:
+#     mid = (left + right) // 2
+#     count += 1
 
-# task 10
-# def ff(arr):
-#     for i in range(len(arr)-1):
-#         if arr[i]>arr[i+1]:
-#             return False
-#     return True
-# a = [2, 4, 1, 5, 3]
-# b = [1, 2, 3, 4, 5]
-# c = [3, 1, 2, 5, 4]
+#     if numbers[mid] == target:
+#         break
+#     elif numbers[mid] < target:
+#         left = mid + 1
+#     else:
+#         right = mid - 1
 
-# print("a:",ff(a))
-# print("b:",ff(b))
-# print("c:",ff(c))
+# print("too:", count)
 
+# # task 7
+# scores = [45, 50, 58, 65, 72, 80, 88, 95]
 
-# task 11
-# def arr(n):
-#     for i in range(len(n)-1):
-#         min_indx = i
-#         for j in range(i+1,len(n)):
-#             if n[j]<n[min_indx]:
-#                 min_indx = j
-    
-#         t = n[i]
-#         n[i]=n[min_indx]
-#         n[min_indx]=t
-#     return n
-# n = list(map(int,input("too: ").split()))
-# print(arr(n))
+# target = int(input("too: "))
 
-# task 12
-# def arr(n):
-#     for i in range(len(n)-1):
-#         min_indx = i
-#         for j in range(i+1,len(n)):
-#             if n[j]>n[min_indx]:
-#                 min_indx = j
-    
-#         t = n[i]
-#         n[i]=n[min_indx]
-#         n[min_indx]=t
-#     return n
-# n = list(map(int,input("too: ").split()))
-# print(arr(n))
+# left = 0
+# right = len(scores) - 1
+# found = False
 
-# task 13
+# while left <= right:
+#     mid = (left + right) // 2
 
-# arr = list(map(int,input("too: ").split()))
-# for i in range(len(arr)-1):
-#     min_index = i
-#     for j in range(i+1,len(arr)):
-#         if arr[j]<arr[min_index]:
-#             min_index = j
-#     t = arr[i]
-#     arr[i]=arr[min_index]
-#     arr[min_index]=t
-# print(arr[0])
+#     if scores[mid] == target:
+#         print("too:", mid)
+#         found = True
+#         break
+#     elif scores[mid] < target:
+#         left = mid + 1
+#     else:
+#         right = mid - 1
 
-# task 14
-# arr = [5, 3, 4, 1, 2]
-# for i in range(len(arr)-1):
-#     min_indx = i
-#     for j in range(i+1,len(arr)):
-#         if arr[j]<arr[min_indx]:
-#             min_indx = j
-#     t = arr[i]
-#     arr[i]=arr[min_indx]
-#     arr[min_indx]=t
-#     print(arr)
+# if not found:
+#     print("oldsongvi")
+
+#     # task 8
+
+#     codes = [101, 105, 112, 120, 135, 148, 160, 175]
+
+# target = int(input("baraani vne: "))
+
+# left = 0
+# right = len(codes) - 1
+# found = False
+
+# while left <= right:
+#     mid = (left + right) // 2
+
+#     if codes[mid] == target:
+#         found = True
+#         break
+#     elif codes[mid] < target:
+#         left = mid + 1
+#     else:
+#         right = mid - 1
+
+# if found:
+#     print("baihgvi")
+# else:
+#     print("baihgvi")
+
+# # task 9
+# book_ids = [1002, 1015, 1028, 1040, 1055, 1072, 1090]
+
+# target = int(input("too: "))
+
+# left = 0
+# right = len(book_ids) - 1
+# result = -1
+
+# while left <= right:
+#     mid = (left + right) // 2
+
+#     if book_ids[mid] == target:
+#         result = mid
+#         break
+#     elif book_ids[mid] < target:
+#         left = mid + 1
+#     else:
+#         right = mid - 1
+
+# print(result)
+
+# # task 10
+# numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90]
+
+# target = int(input("too: "))
+
+# left = 0
+# right = len(numbers) - 1
+# found = False
+
+# while left <= right:
+#     mid = (left + right) // 2
+
+#     print("left =", left, "right =", right, "mid =", mid)
+
+#     if numbers[mid] == target:
+#         print("Индекс:", mid)
+#         found = True
+#         break
+#     elif numbers[mid] < target:
+#         left = mid + 1
+#     else:
+#         right = mid - 1
+
+# if not found:
+#     print("Олдсонгүй")
+
+# # task 11
+
+# numbers = [2, 4, 4, 4, 6, 8, 10, 10]
+
+# target = int(input("too: "))
+
+# left = 0
+# right = len(numbers) - 1
+# result = -1
+
+# while left <= right:
+#     mid = (left + right) // 2
+
+#     if numbers[mid] == target:
+#         result = mid
+#         right = mid - 1
+#     elif numbers[mid] < target:
+#         left = mid + 1
+#     else:
+#         right = mid - 1
+
+# print(result)
+
+# # task 12
+
+# numbers = [1, 3, 3, 3, 5, 7, 7, 9]
+
+# target = int(input("too: "))
+
+# left = 0
+# right = len(numbers) - 1
+# result = -1
+
+# while left <= right:
+#     mid = (left + right) // 2
+
+#     if numbers[mid] == target:
+#         result = mid
+#         left = mid + 1
+#     elif numbers[mid] < target:
+#         left = mid + 1
+#     else:
+#         right = mid - 1
+
+# print(result)
+
+# # task 13
+# numbers = [10, 20, 30, 40, 50, 60]
+
+# target = int(input("tooo: "))
+
+# left = 0
+# right = len(numbers)
+
+# while left < right:
+#     mid = (left + right) // 2
+
+#     if numbers[mid] < target:
+#         left = mid + 1
+#     else:
+#         right = mid
+
+# print("too:", left)
+
+# # task 14
+
+# numbers = [5, 12, 19, 26, 33, 40, 47]
+
+# target = int(input("too: "))
+
+# left = 0
+# right = len(numbers) - 1
+# result = -1
+
+# while left <= right:
+#     mid = (left + right) // 2
+
+#     if numbers[mid] < target:
+#         result = numbers[mid]
+#         left = mid + 1
+#     else:
+#         right = mid - 1
+
+# if result == -1:
+#     print("baihgvi")
+# else:
+#     print(result)
 
 # # task 15
-# n = list(map(int,input("bubble sort:  ").split()))
-# for i in range (len(n)-1):
-#     for j in range(len(n)-1-i):
-#         if n[j]>n[j+1]:
-#             a = n[j]
-#             n[j] = n[j+1]
-#             n[j+1]=a
-# arr = list(map(int,input("Selection Sort:  ").split()))
-# for i in range(len(arr)-1):
-#     min_indx = i
-#     for j in range(i+1,len(arr)):
-#         if arr[j]<arr[min_indx]:
-#             min_indx = j
-#     t = arr[i]
-#     arr[i]=arr[min_indx]
-#     arr[min_indx]=t
-# if n == arr:
-#     print("vr dvn adil")
-# else:
-#     print("vr dvn oor")
+# numbers = [3, 8, 13, 18, 23, 28, 33, 38, 43]
 
+# a = int(input("too: "))
+# b = int(input("too: "))
 
+# for target in [a, b]:
+#     left = 0
+#     right = len(numbers) - 1
+#     result = -1
 
-# Merge Sort:
+#     while left <= right:
+#         mid = (left + right) // 2
 
-# def merge_sort(numbers):                # [5,1,3,2,4]
-#     if len(numbers) <= 1:           
-#         return numbers
-
-#     mid = len(numbers) // 2            #goliin toog oloh [5,1] [3] [2,4]
-
-#     left = numbers[:mid]                # [5,1] [2,4]
-#     right = numbers[mid:]               #slice(method)
-
-#     left = merge_sort(left)             # uurig n dahin duudah: 1 1 tusdaa bolgohod ashiglana
-#     right = merge_sort(right)           # left[5] [1] mid [3] right [2] [4] tus tusd n list dotor hiij bn
-
-#     result = []                         
-
-#     i = 0                               # left
-#     j = 0                               # right
-
-#     while i < len(left) and j < len(right):         # 0 deh indexees leftr rightiin urt n ih bh ym bol dawtna:
-#         if left[i] <= right[j]:                     # leftiin 0 rightiin 0 ees baga buyu = bwl
-#             result.append(left[i])                  # vr dvng left iin 0 deh indexd oruulna
-#             i += 1                                  # daraah vr dvng shalgahiin tuld i buyu 0 deh index dr 1iig nemj draagin indexiig olno
-#         else:                                       # esrgere bwl:
-#             result.append(right[j])                 # rightiin 0 deh indexd oruulna
-#             j += 1                                  # daraah vr dvng shalgahiin tuld j buyu 0 deh index dr 1iig nemj draagin indexiig olno
-
-#     while i < len(left):                            
-#         result.append(left[i])
-#         i += 1
-
-#     while j < len(right):
-#         result.append(right[j])
-#         j += 1
-
-#     return result
-
-
-# numbers = [8, 3, 5, 4, 7, 6, 1, 2]
-
-# print(merge_sort(numbers))
-
-# Merge Sort — Дасгал ажлууд :
-
-# task 1
-# def merge_sort(n):
-#     if len(n)<=1:
-#         return n
-#     mid = len(n)//2
-
-#     left = n[:mid]
-#     right = n[mid:]
-
-#     left = merge_sort(left)
-#     right = merge_sort(right)
-
-#     r = []
-
-#     i = 0 
-#     j = 0
-#     while i < len(left) and j < len(right):
-#         if left[i]<=right[j]:
-#             r.append(left[i])
-#             i+=1
+#         if numbers[mid] == target:
+#             result = mid
+#             break
+#         elif numbers[mid] < target:
+#             left = mid + 1
 #         else:
-#             r.append(right[j])
-#             j+=1
-#     while i < len(left):
-#         r.append(left[i])
-#         i+=1
-#     while j < len(right):
-#         r.append(right[j])
-#         j+=1
-#     return r
-# n = list(map(int,input("too:  ").split()))
-# print(merge_sort(n))
+#             right = mid - 1
 
-# def merge_sort(n):
-#     if len(n)<=1:
-#         return n
-#     mid = len(n)//2
-#     left = n[:mid]
-#     right = n[mid:]
+#     print(target, "too:", result)
 
-#     left = merge_sort(left)
-#     right = merge_sort(right)
+# # task 16
+# numbers = [3, 8, 13, 18, 23, 28, 33, 38, 43]
 
-#     r=[]
+# a = int(input("too: "))
+# b = int(input("too: "))
 
-#     i = 0 
-#     j = 0
+# for target in [a, b]:
+#     left = 0
+#     right = len(numbers) - 1
+#     result = -1
 
-#     while i < len(left) and j < len(right):
-#         if left[i]>=right[j]:
-#             r.append(left[i])
-#             i+=1
+#     while left <= right:
+#         mid = (left + right) // 2
+
+#         if numbers[mid] == target:
+#             result = mid
+#             break
+#         elif numbers[mid] < target:
+#             left = mid + 1
 #         else:
-#             r.append(right[j])
-#             j+=1
-#     while i<len(left):
-#         r.append(left[i])
-#         i+=1
-#     while j<len(right):
-#         r.append(right[j])
-#         j+=1
-#     return r
-# n = list(map(int,input("too:  ").split()))
-# print(merge_sort(n))
+#             right = mid - 1
 
-# task 3
-# def merge_sort(n):
-#     if len(n)<=1:
-#         return n
-#     mid = len(n)//2
-#     left = n[:mid]
-#     right = n[mid:]
-#     left = merge_sort(left)
-#     right = merge_sort(right)
+#     print(target, "too:", result)
 
-#     r = []
-#     i = 0
-#     j = 0
-#     while i<len(left) and j<len(right):
-#         if left[i]<=right[j]:
-#             r.append(left[i])
-#             i+=1
-#         else:
-#             r.append(right[j])
-#             j+=1
-#     while i<len(left):
-#         r.append(left[i])
-#         i+=1
-#     while j<len(right):
-#         r.append(right[j])
-#         j+=1
-#     return r
-# n = list(map(int,input("too:  ").split()))
-# print(merge_sort(n))
+# # task 17
+# numbers = [95, 82, 70, 61, 49, 35, 20, 11]
 
-# task 4
-# def merge_sort(n):
-#     if len(n)<=1:
-#         return n
-#     mid = len(n)//2
-#     left = n[:mid]
-#     right = n[mid:]
-#     left = merge_sort(left)
-#     right = merge_sort(right)
+# target = int(input("tooo: "))
 
-#     r = []
-#     i = 0
-#     j = 0
-#     while i<len(left) and j<len(right):
-#         if left[i]<=right[j]:
-#             r.append(left[i])
-#             i+=1
-#         else:
-#             r.append(right[j])
-#             j+=1
-#     while i<len(left):
-#         r.append(left[i])
-#         i+=1
-#     while j<len(right):
-#         r.append(right[j])
-#         j+=1
-#     return r
-# n = list(map(int,input("too:  ").split()))
-# print(merge_sort(n))
+# left = 0
+# right = len(numbers) - 1
+# result = -1
 
-# task 5
-# def merge_sort(n):
-#     if len(n)<=1:
-#         return n
-#     mid = len(n)//2
-#     left = n[:mid]
-#     right = n[mid:]
-#     left = merge_sort(left)
-#     right = merge_sort(right)
+# while left <= right:
+#     mid = (left + right) // 2
 
-#     r = []
-#     i = 0
-#     j = 0
-#     while i<len(left) and j<len(right):
-#         if left[i]<=right[j]:
-#             r.append(left[i])
-#             i+=1
-#         else:
-#             r.append(right[j])
-#             j+=1
-#     while i<len(left):
-#         r.append(left[i])
-#         i+=1
-#     while j<len(right):
-#         r.append(right[j])
-#         j+=1
-#     return r
-# n = list(map(int,input("too:  ").split()))
-# a = merge_sort(n)
-# p = []
-# l = []
-# for i in a:
-#     if i%2==0:
-#         p.append(i)
+#     if numbers[mid] == target:
+#         result = mid
+#         break
+#     elif numbers[mid] > target:
+#         left = mid + 1
 #     else:
-#         l.append(i)
-# k = p + l
-# print (k)
-# print(p)
-# print(l)
+#         right = mid - 1
 
+# print(result)
 
-# task 6
-# def merge_sort(n):
-#     if len(n)<=1:
-#         return n
-#     mid = len(n)//2
-#     left = n[:mid]
-#     right = n[mid:]
-#     left = merge_sort(left)
-#     right = merge_sort(right)
+# # task 18
+# def binary_search(numbers, target):
+#     left = 0
+#     right = len(numbers) - 1
 
-#     r = []
-#     i = 0
-#     j = 0
-#     while i<len(left) and j<len(right):
-#         if left[i]<=right[j]:
-#             r.append(left[i])
-#             i+=1
+#     while left <= right:
+#         mid = (left + right) // 2
+
+#         if numbers[mid] == target:
+#             return mid
+#         elif numbers[mid] < target:
+#             left = mid + 1
 #         else:
-#             r.append(right[j])
-#             j+=1
-#     while i<len(left):
-#         r.append(left[i])
-#         i+=1
-#     while j<len(right):
-#         r.append(right[j])
-#         j+=1
-#     return r
-# n = list(map(int,input("too:  ").split()))
-# a = list(map(int,input("too:  ").split()))
-# print(merge_sort(a+n))
-
-
-# task 7
-# def merge_sort(n):
-#     if len(n)<=1:
-#         return n
-#     mid = len(n)//2
-#     left = n[:mid]
-#     right = n[mid:]
-#     left = merge_sort(left)
-#     right = merge_sort(right)
-
-#     r = []
-#     i = 0
-#     j = 0
-#     while i<len(left) and j<len(right):
-#         if left[i]<=right[j]:
-#             r.append(left[i])
-#             i+=1
-#         else:
-#             r.append(right[j])
-#             j+=1
-#     while i<len(left):
-#         r.append(left[i])
-#         i+=1
-#     while j<len(right):
-#         r.append(right[j])
-#         j+=1
-#     return r
-# n = list(map(int,input("too:  ").split()))
-# b = merge_sort(n)
-# print(b[0:3])
-
-# task 8
-# def merge_sort(n):
-#     if len(n)<=1:
-#         return n
-#     mid = len(n)//2
-#     left = n[:mid]
-#     right = n[mid:]
-#     left = merge_sort(left)
-#     right = merge_sort(right)
-
-#     r = []
-#     count = 0
-#     i = 0
-#     j = 0
-#     while i<len(left) and j<len(right):
-#         if left[i]<=right[j]:
-#             r.append(left[i])
-#             i+=1
-#             count+=1
-#         else:
-#             r.append(right[j])
-#             j+=1
-#     while i<len(left):
-#         r.append(left[i])
-#         i+=1
-#     while j<len(right):
-#         r.append(right[j])
-#         j+=1
-#     return r
-# n = list(map(int,input("too:  ").split()))
-# print(count)
-
-
-# Stack ба Queue
-# 1.b
-# 2.a
-# 3.c
-# 4.d
-# 5.a
-# 6.b
-# 7.d
-# 8.c
-# 9.d
-# 10.d
-# 11.a
-# 12.c
-# 13.b
-# 14.d
-# 15.a
-# 16.c
-# 17.d
-# 18.b
-# 19.a
-# 20.b
-# 21.b
-# 22.a
-# 23.b
-# 24.c
-# 24.c
-# 25.d
-# 26.a
-# 27.c
-# 28.d
-# 29.b
-# 30.c
-
-# task 
-# 1.a
-# 2.b
-# 3.d
-# 4.d
-# 5.d
-# 6.a
-# 7.a
-# 8.c
-# 9.b
-# 10.d
-# 11.a
-# 12.d
-# 13.d
-# 14.b
-# 15.c
-# 16.a
-# 17.c
-# 18.a
-# 19.c
-# 20.a
-
-
-# def quick_sort(arr):
-#     if len(arr) <= 1:
-#         return arr
-
-#     pivot = arr[len(arr) // 2]
-
-#     left = []
-#     middle = []
-#     right = []
+#             right = mid - 1
 
-#     for num in arr:
-#         if num < pivot:
-#             left.append(num)
-#         elif num == pivot:
-#             middle.append(num)
-#         else:
-#             right.append(num)
-
-#     return quick_sort(left) + middle + quick_sort(right)
-
-
-# numbers = [8, 3, 1, 7, 0, 10, 2]
-
-# print(quick_sort(numbers))
+#     return -1
 
-# task 1
-# def quick_sort(arr):
-#     if len(arr) <= 1:
-#         return arr
 
-#     pivot = arr[len(arr) // 2]
-
-#     left = []
-#     middle = []
-#     right = []
+# numbers = [3, 7, 12, 18, 25, 31, 40]
 
-#     for num in arr:
-#         if num < pivot:
-#             left.append(num)
-#         elif num == pivot:
-#             middle.append(num)
-#         else:
-#             right.append(num)
-
-#     return quick_sort(left) + middle + quick_sort(right)
-
+# target = int(input("tooo: "))
 
-# numbers = list(map(int,input("too: ").split()))
-# print(quick_sort(numbers))
+# print(binary_search(numbers, target))
 
-# task 2
-# def quick_sort(arr):
-#     if len(arr) <= 1:
-#         return arr
+# # task 19
+# numbers = [1, 2, 2, 2, 2, 4, 5, 5, 7, 8]
 
-#     pivot = arr[len(arr) // 2]
+# target = int(input("tooo: "))
 
-#     left = []
-#     middle = []
-#     right = []
+# left = 0
+# right = len(numbers) - 1
+# first = -1
 
-#     for num in arr:
-#         if num >pivot:
-#             left.append(num)
-#         elif num == pivot:
-#             middle.append(num)
-#         else:
-#             right.append(num)
+# while left <= right:
+#     mid = (left + right) // 2
 
-#     return quick_sort(left) + middle + quick_sort(right)
+#     if numbers[mid] == target:
+#         first = mid
+#         right = mid - 1
+#     elif numbers[mid] < target:
+#         left = mid + 1
+#     else:
+#         right = mid - 1
 
+# left = 0
+# right = len(numbers) - 1
+# last = -1
 
-# numbers = list(map(int,input("too: ").split()))
-# print(quick_sort(numbers))
+# while left <= right:
+#     mid = (left + right) // 2
 
+#     if numbers[mid] == target:
+#         last = mid
+#         left = mid + 1
+#     elif numbers[mid] < target:
+#         left = mid + 1
+#     else:
+#         right = mid - 1
 
-# task 3
-# def quick_sort(arr):
-#     if len(arr) <= 1:
-#         return arr
+# if first == -1:
+#     print("0")
+# else:
+#     count = last - first + 1
+#     print("dawtagdsan:", count)
 
-#     pivot = arr[len(arr) // 2]
+#     # task 20
+#     numbers = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20,
+#            22, 24, 26, 28, 30, 32, 34, 36, 38, 40]
 
-#     left = []
-#     middle = []
-#     right = []
+# target = 38
 
-#     for num in arr:
-#         if num <pivot:
-#             left.append(num)
-#         elif num == pivot:
-#             middle.append(num)
-#         else:
-#             right.append(num)
+# # Linear Search
+# linear_count = 0
 
-#     return quick_sort(left) + middle + quick_sort(right)
+# for i in range(len(numbers)):
+#     linear_count += 1
 
+#     if numbers[i] == target:
+#         linear_index = i
+#         break
 
-# numbers = list(map(int,input("too: ").split()))
-# print(quick_sort(numbers))
+# # Binary Search
+# left = 0
+# right = len(numbers) - 1
+# binary_count = 0
 
+# while left <= right:
+#     mid = (left + right) // 2
+#     binary_count += 1
 
-# task 4
-# def quick_sort(arr):
-#     if len(arr) <= 1:
-#         return arr
-
-#     pivot = arr[len(arr) // 2]
-
-#     left = []
-#     middle = []
-#     right = []
-
-#     for num in arr:
-#         if num <pivot:
-#             left.append(num)
-#         elif num == pivot:
-#             middle.append(num)
-#         else:
-#             right.append(num)
-
-#     return quick_sort(left) + middle + quick_sort(right)
-
-
-# numbers = list(map(int,input("too: ").split()))
-# print(quick_sort(numbers))
-
-# task 5
-# def quick_sort(arr):
-#     if len(arr) <= 1:
-#         return arr
-
-#     pivot = arr[len(arr) // 2]
-
-#     left = []
-#     middle = []
-#     right = []
-
-#     for num in arr:
-#         if num <pivot:
-#             left.append(num)
-#         elif num == pivot:
-#             middle.append(num)
-#         else:
-#             right.append(num)
-
-#     return quick_sort(left) + middle + quick_sort(right)
-
-
-# numbers = list(map(int,input("too: ").split()))
-# quick_sort(numbers)
-# print(quick_sort(numbers)[0:3])
-
-
-
-# task 6
-# def quick_sort(arr):
-#     if len(arr) <= 1:
-#         return arr
-
-#     pivot = arr[len(arr) // 2]
-
-#     left = []
-#     middle = []
-#     right = []
-
-#     for num in arr:
-#         if num >pivot:
-#             left.append(num)
-#         elif num == pivot:
-#             middle.append(num)
-#         else:
-#             right.append(num)
-
-#     return quick_sort(left) + middle + quick_sort(right)
-
-
-# numbers = list(map(int,input("too: ").split()))
-# print(quick_sort(numbers)[0:3])
-
-
-# task 7
-# def quick_sort(arr):
-#     if len(arr) <= 1:
-#         return arr
-
-#     pivot = arr[len(arr) // 2]
-
-#     left = []
-#     middle = []
-#     right = []
-
-#     for num in arr:
-#         if num[1] <pivot[1]:
-#             left.append(num)
-#         elif num == pivot:
-#             middle.append(num)
-#         else:
-#             right.append(num)
-
-#     return quick_sort(left) + middle + quick_sort(right)
-
-
-# numbers  =  [("Bat", 85), ("Bold", 70), ("Saraa", 95), ("Anu", 60)]
-# print(quick_sort(numbers))
-
-
-# task 8
-# def quick_sort(arr):
-#     if len(arr) <= 1:
-#         return arr
-
-#     pivot = arr[len(arr) // 2]
-
-#     left = []
-#     middle = []
-#     right = []
-
-#     for num in arr:
-#         if len(num) <len(pivot):
-#             left.append(num)
-#         elif num == pivot:
-#             middle.append(num)
-#         else:
-#             right.append(num)
-
-#     return quick_sort(left) + middle + quick_sort(right)
-
-
-# numbers  = "banana", "cat", "apple", "hi", "dog"
-# print(quick_sort(numbers))
-
-
-# task 9
-def quick_sort(arr):
-    if len(arr) <= 1:
-        return arr
-
-    pivot = arr[len(arr) // 2]
-
-    left = []
-    middle = []
-    right = []
-
-    for num in arr:
-        if num <pivot:
-            left.append(num)
-        elif num == pivot:
-            middle.append(num)
-        else:
-            right.append(num)
-
-    return quick_sort(left) + middle + quick_sort(right)
-
-
-numbers  = [7, 1, 5, 3, 9]
-quick_sort(numbers)
-n = len(quick_sort)//2
-print(n)
+#     if numbers[mid] == target:
+#         binary_index = mid
+#         break
+#     elif numbers[mid] < target:
+#         left = mid + 1
+#     else:
+#         right = mid - 1
 
