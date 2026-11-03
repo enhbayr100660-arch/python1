@@ -421,7 +421,7 @@
  
 # a = {"name" : "temuulen", 
 #      "age" : 24,
-#      "phone" : 90939423
+#      "phone" : 99110082
 #     }
 # a["age"] = "er" 
 # print(a)
